@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trabalhe Conosco | JCLRH Consultoria</title>
+<style>
+:root{--navy:#10243a;--gold:#c6a45b;--ink:#182433;--muted:#5e6a78;--line:#d9e0e7;--bg:#f4f6f8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.5}.wrap{max-width:780px;margin:24px auto;padding:16px}.brand{background:var(--navy);color:#fff;padding:26px 24px;border-radius:14px 14px 0 0;border-bottom:4px solid var(--gold)}.mark{font-weight:800;letter-spacing:2px;font-size:23px}.brand p{margin:6px 0 0;color:#e0e6ed}.panel{background:#fff;padding:24px;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;box-shadow:0 5px 20px #10243a10}h1{font-size:23px;margin:0 0 6px;color:var(--navy)}.intro{margin:0 0 22px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{margin-bottom:16px;min-width:0}.full{grid-column:1/-1}label{display:block;font-weight:700;margin-bottom:6px;font-size:14px}input,select,textarea{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1px solid #bfc9d3;border-radius:8px;background:#fff;color:var(--ink)}textarea{min-height:92px;resize:vertical}input[type=file]{font-size:14px;padding:9px}.hint{font-size:12px;color:var(--muted);margin:5px 0 0}.required{color:#a33}.consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0}.consent input{width:18px;height:18px;flex:0 0 auto;margin-top:4px}.consent label{font-weight:400;margin:0}.btn{width:100%;border:0;border-radius:9px;padding:14px 18px;background:var(--navy);color:#fff;font-size:16px;font-weight:700;cursor:pointer}.btn:disabled{opacity:.6;cursor:wait}.status{margin-top:16px;padding:12px;border-radius:8px;display:none}.status.ok{display:block;background:#e8f5ec;color:#155d2b}.status.err{display:block;background:#fff0ef;color:#8a211b}.footer{font-size:12px;color:var(--muted);text-align:center;margin:16px 0 0}.divider{border:0;border-top:1px solid var(--line);margin:22px 0}.section{font-size:17px;color:var(--navy);margin:0 0 14px}@media(max-width:600px){.wrap{padding:10px;margin:10px auto}.brand,.panel{padding:20px 16px}.grid{grid-template-columns:1fr}.full{grid-column:auto}}
+</style></head><body><div class="wrap">
+<header class="brand"><div class="mark">JCLRH CONSULTORIA</div><p>Trabalhe Conosco · Recrutamento e Seleção</p></header>
+<main class="panel"><h1>Candidate-se a uma oportunidade</h1><p class="intro">Preencha seus dados e anexe seu currículo em PDF. Os campos marcados com <span class="required">*</span> são obrigatórios.</p>
+<form id="applicationForm">
+<div class="field full"><label for="vaga_id">Vaga desejada <span class="required">*</span></label><select id="vaga_id" name="vaga_id" required><option value="">Carregando vagas disponíveis...</option></select><p id="vacancyHint" class="hint">Selecione uma vaga ativa.</p></div>
+<div class="grid">
+<div class="field"><label for="nome_completo">Nome completo <span class="required">*</span></label><input id="nome_completo" name="nome_completo" maxlength="150" autocomplete="name" required></div>
+<div class="field"><label for="email">E-mail <span class="required">*</span></label><input id="email" name="email" type="email" maxlength="254" autocomplete="email" required></div>
+<div class="field"><label for="telefone">Telefone/WhatsApp <span class="required">*</span></label><input id="telefone" name="telefone" type="tel" maxlength="40" autocomplete="tel" required></div>
+<div class="field"><label for="cidade">Cidade/UF <span class="required">*</span></label><input id="cidade" name="cidade" maxlength="120" autocomplete="address-level2" placeholder="Ex.: Cataguases/MG" required></div></div>
+<hr class="divider"><h2 class="section">Documentos</h2>
+<div class="field"><label for="cv">Currículo em PDF <span class="required">*</span></label><input id="cv" name="cv" type="file" accept="application/pdf,.pdf" required><p class="hint">Obrigatório · PDF de até 5 MB.</p></div>
+<div class="grid"><div class="field"><label for="disc">Teste/relatório DISC (opcional)</label><input id="disc" name="disc" type="file" accept="application/pdf,.pdf"><p class="hint">PDF de até 5 MB.</p></div>
+<div class="field"><label for="laudo_pcd">Laudo PCD (opcional)</label><input id="laudo_pcd" name="laudo_pcd" type="file" accept="application/pdf,.pdf"><p class="hint">Anexe somente se for pertinente à candidatura. PDF de até 5 MB.</p></div></div>
+<hr class="divider"><h2 class="section">Conte um pouco sobre você</h2>
+<div class="field"><label for="pergunta_1">1. Qual experiência sua mais combina com esta oportunidade?</label><textarea id="pergunta_1" name="pergunta_1" maxlength="3000"></textarea></div>
+<div class="field"><label for="pergunta_2">2. Qual habilidade você pode trazer para esta função?</label><textarea id="pergunta_2" name="pergunta_2" maxlength="3000"></textarea></div>
+<div class="field"><label for="pergunta_3">3. Por que esta oportunidade faz sentido para você?</label><textarea id="pergunta_3" name="pergunta_3" maxlength="3000"></textarea></div>
+<div class="consent"><input id="lgpd_consentimento" name="lgpd_consentimento" type="checkbox" value="true" required><label for="lgpd_consentimento">Autorizo o tratamento dos dados e documentos enviados para análise desta candidatura e para contato sobre oportunidades relacionadas, conforme o aviso de privacidade da JCLRH Consultoria. <span class="required">*</span></label></div>
+<button class="btn" id="submitBtn" type="submit">Enviar candidatura</button><div id="status" class="status" role="status" aria-live="polite"></div></form>
+<p class="footer">JCLRH Consultoria · Seus dados devem ser enviados apenas para fins de recrutamento e seleção.</p></main></div>
+<script>
+(() => {
+ const SUPABASE_URL='https://pdynyuyyiauwezsjgffc.supabase.co';
+ const PUBLISHABLE_KEY='sb_publishable_oaxtURgXoXok6tDIoxi-eQ_LoxeuIhs';
+ const form=document.getElementById('applicationForm'), vacancySelect=document.getElementById('vaga_id'), vacancyHint=document.getElementById('vacancyHint'), submitBtn=document.getElementById('submitBtn'), statusBox=document.getElementById('status');
+ let vacanciesReady=false;
+ function showStatus(message,kind){statusBox.textContent=message;statusBox.className='status '+kind}
+ function validPdf(file,required){if(!file)return !required;return file.size>0&&file.size<=5*1024*1024&&(file.type==='application/pdf'||file.name.toLowerCase().endsWith('.pdf'))}
+ async function loadVacancies(){try{
+  // O status cadastrado no banco é "Ativa", com A maiúsculo.
+  const url=SUPABASE_URL+'/rest/v1/vagas?select=id,titulo,empresa_contratante,localidade&status=eq.ativa&order=titulo.asc';
+  const res=await fetch(url,{headers:{'apikey':PUBLISHABLE_KEY,'Authorization':'Bearer '+PUBLISHABLE_KEY}});
+  if(!res.ok)throw new Error('Não foi possível carregar as vagas.');
+  const rows=await res.json();vacancySelect.innerHTML='';
+  const first=document.createElement('option');first.value='';first.textContent=rows.length?'Selecione uma vaga':'Nenhuma vaga ativa disponível';vacancySelect.appendChild(first);
+  rows.forEach(v=>{const option=document.createElement('option');option.value=v.id;const details=[v.empresa_contratante,v.localidade].filter(Boolean).join(' · ');option.textContent=v.titulo+(details?' — '+details:'');vacancySelect.appendChild(option)});
+  vacanciesReady=rows.length>0;vacancySelect.disabled=!vacanciesReady;submitBtn.disabled=!vacanciesReady;
+  vacancyHint.textContent=vacanciesReady?'Selecione a oportunidade para a qual deseja se candidatar.':'Não há vagas ativas listadas. A equipe JCLRH precisa conferir o cadastro das vagas.';
+ }catch(e){vacancySelect.innerHTML='<option value="">Não foi possível carregar as vagas</option>';vacancySelect.disabled=true;submitBtn.disabled=true;vacancyHint.textContent='A lista de vagas não carregou. A equipe JCLRH precisa verificar as permissões de leitura pública da tabela de vagas.'}}
+ form.addEventListener('submit',async event=>{event.preventDefault();
+  if(!vacanciesReady||!vacancySelect.value){showStatus('Selecione uma vaga disponível antes de enviar.','err');return}
+  const cv=document.getElementById('cv').files[0],disc=document.getElementById('disc').files[0],laudo=document.getElementById('laudo_pcd').files[0];
+  if(!validPdf(cv,true)){showStatus('Anexe o currículo em PDF, com até 5 MB.','err');return}
+  if(!validPdf(disc,false)||!validPdf(laudo,false)){showStatus('Os documentos opcionais também precisam ser PDFs de até 5 MB.','err');return}
+  const total=[cv,disc,laudo].filter(Boolean).reduce((sum,f)=>sum+f.size,0);
+  if(total>12*1024*1024){showStatus('O tamanho total dos documentos ultrapassa 12 MB. Reduza os arquivos e tente novamente.','err');return}
+  submitBtn.disabled=true;submitBtn.textContent='Enviando...';statusBox.className='status';statusBox.textContent='';
+  try{const data=new FormData(form);const response=await fetch(SUPABASE_URL+'/functions/v1/receber-candidatura',{method:'POST',headers:{'apikey':PUBLISHABLE_KEY,'Authorization':'Bearer '+PUBLISHABLE_KEY},body:data});
+   let result={};try{result=await response.json()}catch(_){}
+   if(!response.ok||!result.success)throw new Error(result.error||'Não foi possível enviar a candidatura.');
+   form.reset();showStatus('Candidatura recebida com sucesso! Agradecemos seu interesse na JCLRH Consultoria.','ok');
+  }catch(err){showStatus(err.message||'Ocorreu um erro no envio. Tente novamente mais tarde.','err')}
+  finally{submitBtn.disabled=!vacanciesReady;submitBtn.textContent='Enviar candidatura'}
+ });
+ loadVacancies();
+})();
+</script></body></html>
